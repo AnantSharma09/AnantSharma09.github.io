@@ -1,0 +1,44 @@
+<div class="hero">
+  <h1>{{ author_name }}</h1>
+  <div class="role">{{ tagline }}</div>
+  <p class="bio">{{ bio }}</p>
+  <div class="links">
+    {% for label, url in links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}
+  </div>
+</div>
+
+<div class="section-head">
+  <h2>recent writing</h2>
+  <span class="count"><a href="{{ root }}posts.html">all posts &rarr;</a></span>
+</div>
+<ul class="entry-list">
+  {% for p in posts %}
+  <li class="entry">
+    <span class="num">{{ p.date_str }}</span>
+    <div class="title-line">
+      <a class="title" href="{{ root }}posts/{{ p.slug }}.html">{{ p.title }}</a>
+      {% if p.summary %}<div class="summary">{{ p.summary }}</div>{% endif %}
+    </div>
+  </li>
+  {% else %}
+  <li class="entry"><span class="num">&mdash;</span><div class="title-line"><span class="summary">No posts yet. Add a markdown file to content/posts/.</span></div></li>
+  {% endfor %}
+</ul>
+
+<div class="section-head">
+  <h2>recent projects</h2>
+  <span class="count"><a href="{{ root }}projects.html">all projects &rarr;</a></span>
+</div>
+<ul class="entry-list">
+  {% for p in projects %}
+  <li class="entry">
+    <span class="num">{{ p.date_str }}</span>
+    <div class="title-line">
+      <a class="title" href="{{ root }}projects/{{ p.slug }}.html">{{ p.title }}</a>
+      {% if p.summary %}<div class="summary">{{ p.summary }}</div>{% endif %}
+    </div>
+  </li>
+  {% else %}
+  <li class="entry"><span class="num">&mdash;</span><div class="title-line"><span class="summary">No projects yet. Add a markdown file to content/projects/.</span></div></li>
+  {% endfor %}
+</ul>

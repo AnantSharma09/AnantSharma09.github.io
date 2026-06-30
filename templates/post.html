@@ -1,0 +1,14 @@
+<a class="back-link" href="{{ root }}{{ 'posts.html' if kind == 'writing' else ('projects.html' if kind == 'project' else 'papers.html') }}">&larr; back to {{ 'writing' if kind == 'writing' else (kind + 's') }}</a>
+
+<h1>{{ entry.title }}</h1>
+<div class="post-meta">
+  <span>{{ entry.date_str }}</span>
+  {% if entry.status %}<span>&middot; {{ entry.status }}</span>{% endif %}
+  {% if entry.github %}<span>&middot; <a href="{{ entry.github }}">source</a></span>{% endif %}
+  {% if entry.demo %}<span>&middot; <a href="{{ entry.demo }}">demo</a></span>{% endif %}
+  {% for t in entry.tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+</div>
+
+<div class="post-body">
+{{ entry.html | safe }}
+</div>

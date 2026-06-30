@@ -1,0 +1,20 @@
+<div class="section-head" style="margin-top:50px;">
+  <h2>{{ heading }}</h2>
+  <span class="count">{{ items|length }} {{ 'entry' if items|length == 1 else 'entries' }}</span>
+</div>
+<ul class="entry-list">
+  {% for p in items %}
+  <li class="entry">
+    <span class="num">{{ p.date_str }}</span>
+    <div class="title-line">
+      <a class="title" href="{{ root }}{{ kind_root }}/{{ p.slug }}.html">{{ p.title }}</a>
+      {% if p.summary %}<div class="summary">{{ p.summary }}</div>{% endif %}
+      {% if p.tags %}
+      <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+      {% endif %}
+    </div>
+  </li>
+  {% else %}
+  <li class="entry"><span class="num">&mdash;</span><div class="title-line"><span class="summary">Nothing here yet.</span></div></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,22 @@
+<div class="hero" style="padding-top:48px;">
+  <h1>about</h1>
+  <div class="role">{{ tagline }}</div>
+</div>
+
+<div class="about-section">
+  <p class="lede">{{ bio }}</p>
+</div>
+
+<div class="about-section">
+  <h2>elsewhere</h2>
+  <div class="links">
+    {% for label, url in links %}<a href="{{ url }}">{{ label }}</a>{% endfor %}
+  </div>
+</div>
+
+<div class="about-section">
+  <h2>what this site is</h2>
+  <p>A running log of what I build and what I learn while building it &mdash;
+  computer vision, reinforcement learning, and world models, written up
+  close to the moment I figure each thing out rather than after the fact.</p>
+</div>
