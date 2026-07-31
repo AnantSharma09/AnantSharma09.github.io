@@ -10,14 +10,14 @@ tags:
   - Numpy
 ---
 
-### **Interviewr:** What is a Neural Networks?
+**Interviewr:** ***What is a Neural Networks?***
 
-### **Me:** It's a network of neurons that learns predicts the output for a given problem.
+**Me:** ***It's a network of neurons that learns predicts the output for a given problem.***
 
-### **Inverviewr:** But *why* does a neural network work? Why is a simple linear function, `Wx + b`, not enough? Why does adding an activation function suddenly make it capable of learning? And why does stacking these layers together allow it to solve incredibly complex problems?
+**Inverviewr:** ***But *why* does a neural network work? Why is a simple linear function, `Wx + b`, not enough? Why does adding an activation function suddenly make it capable of learning? And why does stacking these layers together allow it to solve incredibly complex problems?***
 
 
-### **Me:** ......                                           Sorry, I don't know!!!
+**Me:** ***......Sorry,I don't know!!!***
 
 Most people in machine learning can answer **what** a neural network is. Far fewer can confidently explain **why** it works.That realization bothered me.
 
