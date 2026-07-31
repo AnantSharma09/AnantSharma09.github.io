@@ -30,4 +30,15 @@ This blog series is my attempt to answer those questions from first principles.R
 
 Only after understanding both approaches will I move on to PyTorch, where the abstractions actually make sense instead of feeling like magic.The goal isn't just to build another neural network. It's to understand *why* every line of code exists.
 
-## **Implementation 1: Computational graph and Automatic Differentation
+
+
+## **Introduction** 
+- what is a neural network?
+A neural network is a output prediction architecture which is created by stacking up multiple non-linear equations such that they can learn everytype of data and not just linear ones, why neurons , because the network is loosly insperied by the brain 
+ 
+- why neural networks?
+
+
+
+## **Implementation 1:** Computational graph and Automatic Differentation
+
